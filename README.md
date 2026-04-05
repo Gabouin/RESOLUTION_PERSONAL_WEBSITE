@@ -8,4 +8,5 @@ I always dreamed of a website that could be used as a portfolio of my projects !
 
 
 test it here : https://69d2dcd0ec17470008ef4dbd--dulcet-queijadas-1c9637.netlify.app/
-in a few days, it will be in this domain : gabintavernier.com
+
+in a few days, it will be in this domain : http://gabintavernier.com
