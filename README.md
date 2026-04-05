@@ -10,3 +10,5 @@ I always dreamed of a website that could be used as a portfolio of my projects !
 test it here : https://69d2dcd0ec17470008ef4dbd--dulcet-queijadas-1c9637.netlify.app/
 
 in a few days, it will be in this domain : http://gabintavernier.com
+
+<img width="1899" height="907" alt="image" src="https://github.com/user-attachments/assets/5d16e3c6-133b-4713-8777-da61114758b2" />
