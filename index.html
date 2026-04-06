@@ -27,38 +27,47 @@
         <h2 id="projects"> <div>MY PROJECTS</div> </h1>
         <div class="projects-grid">
             <div class="project">
-                <img src="./gabin rc plane.png" alt="RC Plane Project" width="400" height="200" />
+                <span class="done-badge">✓ Completed</span>
+                <img src="./gabin rc plane.png" alt="RC Plane Project" width="200" height="200" />
                 <p>Remote Control Plane</p>
             </div>
             <div class="project space-collector">
+                <span class="done-badge">✓ Completed</span>
                 <img src="sprig.png" alt="space collector game" width="300" height="200" />
                 <p>Space collector - arcade game</p>
             </div>
             <div class="project">
+                <span class="done-badge">✓ Completed</span>
                 <img src="fan plane reactor.png" alt="Fan Plane Reactor" width="200" height="200" />
                 <p>Fan Plane Reactor</p>
             </div>
             <div class="project hackpad">
+                <span class="prod-badge">⚡ In Production</span>
                 <img src="hackpad.png" alt="HackPad - a custom macropad" width="230" height="160" />
                 <p>HackPad - a custom macropad</p>
             </div>
             <div class="project devboard">
+                <span class="wip-badge">🚧 In Development</span>
                 <img src="devboard.png" alt="devboard" width="220" height="150" />
                 <p>APX Devboard - Custom Development Board</p>
             </div>
             <div class="project display">
+                <span class="wip-badge">🚧 In Development</span>
                 <img src="display.png" alt="spotify display" width="250" height="160" />
                 <p>Spotify Display - Real time Music controller</p>
             </div>
             <div class="project cubesat">
+                <span class="wip-badge">🚧 In Development</span>
                 <img src="cubesat.png" alt="CubeSat Project" width="270" height="270" />
                 <p>CubeSat Project</p>
             </div>
             <div class="project robotic-arm">
+                <span class="wip-badge">🚧 In Development</span>
                 <img src="arm.png" alt="robotic arm" width="200" height="200" />
                 <p>AI enhanced Robotic Arm</p>
             </div>
             <div class="project raspapi">
+                <span class="wip-badge">🚧 In Development</span>
                 <img src="raspapi.png" alt="RaspAPI" width="200" height="200" />
                 <p>Launch Watch API</p>
             </div>
@@ -74,10 +83,14 @@
             </div>
         </div>
 
-       
-        
+        <!-- Légende des badges -->
+        <button id="legend-btn" aria-label="Légende des badges">?</button>
+        <div id="legend-popup">
+            <p><span class="done-badge">✓ Completed</span> Finished / Shipped project</p>
+            <p><span class="prod-badge">⚡ In Production</span> Waiting for project parts</p>
+            <p><span class="wip-badge">🚧 In Development</span> Project at the design stage</p>
+        </div>
 
-        
        <script src="script.js" defer></script> 
     </body>
 </html>

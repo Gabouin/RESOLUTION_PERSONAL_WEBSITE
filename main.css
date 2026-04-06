@@ -6,6 +6,69 @@ html {
     padding: 0;
 }
 
+/* Legend button */
+#legend-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #0C4A6E;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(12, 74, 110, 0.35);
+    z-index: 100;
+    transition: background 0.2s;
+}
+
+#legend-btn:hover {
+    background: #0284C7;
+}
+
+#legend-popup {
+    display: none;
+    position: fixed;
+    bottom: 66px;
+    right: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 14px 18px;
+    z-index: 100;
+    text-align: left;
+    min-width: 230px;
+    border: 1px solid rgba(186, 230, 253, 0.6);
+}
+
+#legend-popup.open {
+    display: block;
+}
+
+#legend-popup p {
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0C4A6E;
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+#legend-popup .done-badge,
+#legend-popup .prod-badge,
+#legend-popup .wip-badge,
+#modal-body .done-badge,
+#modal-body .prod-badge,
+#modal-body .wip-badge {
+    position: static;
+    box-shadow: none;
+    flex-shrink: 0;
+}
+
 body {
     text-align: center;
     background: linear-gradient(135deg, #E0F2FE 0%, #BAE6FD 50%, #7DD3FC 100%);
@@ -280,12 +343,58 @@ ul {
     cursor: pointer;
     border: 1px solid rgba(186, 230, 253, 0.5);
     box-sizing: border-box;
+    position: relative;
 }
 
 .project:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 32px rgba(14, 165, 233, 0.3);
     border-color: rgba(56, 189, 248, 0.8);
+}
+
+.wip-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #F59E0B, #EF4444);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+    pointer-events: none;
+}
+
+.done-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #22C55E, #16A34A);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.4);
+    pointer-events: none;
+}
+
+.prod-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #FBBF24, #F59E0B);
+    color: #7C2D00;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.4);
+    pointer-events: none;
 }
 
 .project img {

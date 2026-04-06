@@ -22,7 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
       project.style.cursor = 'pointer';
       project.addEventListener('click', () => {
         if (projectContents[idx]) {
-          modalBody.innerHTML = projectContents[idx];
+          const badge = project.querySelector('.done-badge, .prod-badge, .wip-badge');
+          const badgeHTML = badge ? `<div style="margin-bottom:12px">${badge.outerHTML}</div>` : '';
+          modalBody.innerHTML = badgeHTML + projectContents[idx];
           modalBg.style.display = 'flex';
           document.body.style.overflow = 'hidden';
         }
@@ -57,6 +59,22 @@ window.addEventListener('DOMContentLoaded', () => {
       if (!navDropdown.contains(e.target) && !hamburger.contains(e.target)) {
         hamburger.classList.remove('open');
         navDropdown.classList.remove('open');
+      }
+    });
+  }
+
+  // Legend popup
+  const legendBtn = document.getElementById('legend-btn');
+  const legendPopup = document.getElementById('legend-popup');
+
+  if (legendBtn && legendPopup) {
+    legendBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      legendPopup.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!legendPopup.contains(e.target) && e.target !== legendBtn) {
+        legendPopup.classList.remove('open');
       }
     });
   }
