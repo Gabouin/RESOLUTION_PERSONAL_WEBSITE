@@ -8,7 +8,9 @@ I always dreamed of a website that could be used as a portfolio of my projects !
 
 
 first version here : https://69d2dcd0ec17470008ef4dbd--dulcet-queijadas-1c9637.netlify.app/
+
 last version here : https://69d370ae34e32c7577276714--dulcet-queijadas-1c9637.netlify.app/
+
 the last version will be here soon : http://gabintavernier.com
 
 <img width="1899" height="910" alt="image" src="https://github.com/user-attachments/assets/b0fbe97c-6b43-4a29-ab77-ba1bc8cd2e2b" />
