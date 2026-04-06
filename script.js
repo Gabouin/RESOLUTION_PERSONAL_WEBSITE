@@ -17,25 +17,47 @@ window.addEventListener('DOMContentLoaded', () => {
   const modalBody = document.getElementById('modal-body');
   const modalClose = document.getElementById('modal-close');
 
-  projects.forEach((project, idx) => {
-    project.style.cursor = 'pointer';
-    project.addEventListener('click', () => {
-      if (projectContents[idx]) {
-        modalBody.innerHTML = projectContents[idx];
-        modalBg.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-      }
+  if (projects.length && modalBg && modalBody && modalClose) {
+    projects.forEach((project, idx) => {
+      project.style.cursor = 'pointer';
+      project.addEventListener('click', () => {
+        if (projectContents[idx]) {
+          modalBody.innerHTML = projectContents[idx];
+          modalBg.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+      });
     });
-  });
 
-  modalClose.addEventListener('click', () => {
-    modalBg.style.display = 'none';
-    document.body.style.overflow = '';
-  });
-  modalBg.addEventListener('click', (e) => {
-    if (e.target === modalBg) {
+    modalClose.addEventListener('click', () => {
       modalBg.style.display = 'none';
       document.body.style.overflow = '';
-    }
-  });
+    });
+    modalBg.addEventListener('click', (e) => {
+      if (e.target === modalBg) {
+        modalBg.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navDropdown = document.getElementById('nav-dropdown');
+
+  if (hamburger && navDropdown) {
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      hamburger.classList.toggle('open');
+      navDropdown.classList.toggle('open');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navDropdown.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('open');
+        navDropdown.classList.remove('open');
+      }
+    });
+  }
 });
