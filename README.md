@@ -10,3 +10,5 @@ I always dreamed of a website that could be used as a portfolio of my projects !
 test it here : http://gabintavernier.com
 
 <img width="1899" height="907" alt="image" src="https://github.com/user-attachments/assets/5d16e3c6-133b-4713-8777-da61114758b2" />
+
+I updated a lot of things after shipping this project to resolution - Hack Club lol
