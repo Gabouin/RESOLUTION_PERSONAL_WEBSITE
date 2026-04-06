@@ -333,7 +333,7 @@ ul {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 280px;
+    min-height: 280px;
     width: 100%;
     background: #FFFFFF;
     padding: 1.5rem;
@@ -496,3 +496,174 @@ ul {
 .raspapi {
     margin-top: 45px;
 }
+
+/* ── Skills page ── */
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+.skills-row {
+    display: grid;
+    gap: 12px;
+}
+
+.skills-row-top    { grid-template-columns: repeat(3, 1fr); }
+.skills-row-bottom { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 700px) {
+    .skills-row-top,
+    .skills-row-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skill-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding: 1.1rem 1.2rem;
+    text-align: left;
+}
+
+.skill-card-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #0C4A6E;
+    margin-bottom: 0;
+}
+
+.skill-section {
+    margin-top: 10px;
+}
+
+.skill-section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9CA3AF;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.skill-card .tags-list {
+    justify-content: flex-start;
+    margin-top: 0;
+    gap: 4px;
+}
+
+/* Per-card title colors */
+.skill-card--prog   .skill-card-title { color: #3C3489; }
+.skill-card--hw     .skill-card-title { color: #085041; }
+.skill-card--pcb    .skill-card-title { color: #0C447C; }
+.skill-card--soft   .skill-card-title { color: #633806; }
+.skill-card--domain .skill-card-title { color: #3B6D11; }
+
+/* Tags inside skill cards: pill shape, per-card color */
+.skill-card .tag {
+    border-radius: 99px;
+    font-size: 12px;
+    padding: 3px 10px;
+}
+
+.skill-card--prog   .tag { background: #EEEDFE; color: #3C3489; }
+.skill-card--hw     .tag { background: #E1F5EE; color: #085041; }
+.skill-card--pcb    .tag { background: #E6F1FB; color: #0C447C; }
+.skill-card--soft   .tag { background: #FAEEDA; color: #633806; }
+.skill-card--domain .tag { background: #EAF3DE; color: #27500A; }
+
+/* Gray tag — overrides card color, used for reference/tool components */
+.skill-card .tag--gray { background: #F1EFE8; color: #444441; }
+
+/* ── Tags ── */
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#modal-body .tags-list {
+    justify-content: flex-start;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+.tag {
+    font-size: 0.67rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+}
+
+.tag-lang   { background: #DBEAFE; color: #1E3A5F; }
+.tag-hw     { background: #CFFAFE; color: #164E63; }
+.tag-fab    { background: #FEF3C7; color: #78350F; }
+.tag-tool   { background: #EDE9FE; color: #4C1D95; }
+.tag-domain { background: #DCFCE7; color: #14532D; }
+
+/* ── Progress bar (in modal) ── */
+.progress-section {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #E0F2FE;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #0C4A6E;
+    margin-bottom: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+.progress-pct {
+    color: #0284C7;
+    font-weight: 700;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: #E0F2FE;
+    border-radius: 99px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0C4A6E, #38BDF8);
+    border-radius: 99px;
+    transition: width 0.6s ease;
+}
+
+.progress-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.progress-step {
+    font-size: 0.70rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.step-done    { background: #DCFCE7; color: #14532D; }
+.step-current { background: #0284C7; color: #fff; }
+.step-todo    { background: #F1F5F9; color: #94A3B8; }
