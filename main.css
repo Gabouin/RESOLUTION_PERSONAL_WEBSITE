@@ -6,6 +6,89 @@ html {
     padding: 0;
 }
 
+/* ── WIP Full-page Splash ── */
+#wip-splash {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+        -45deg,
+        #F59E0B 0px,
+        #F59E0B 28px,
+        #1a1a1a 28px,
+        #1a1a1a 56px
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wip-splash-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.55);
+}
+
+.wip-splash-card {
+    background: #0f172a;
+    border: 2px solid #F59E0B;
+    border-radius: 16px;
+    padding: 48px 52px;
+    max-width: 480px;
+    width: 88vw;
+    text-align: center;
+    box-shadow: 0 8px 48px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.wip-splash-icons {
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+.wip-splash-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #F59E0B;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.wip-splash-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.97rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin: 0;
+}
+
+#wip-enter-btn {
+    margin-top: 12px;
+    padding: 12px 32px;
+    background: #F59E0B;
+    color: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.15s;
+}
+
+#wip-enter-btn:hover {
+    background: #d97706;
+}
+
 /* Legend button */
 #legend-btn {
     position: fixed;
@@ -422,6 +505,15 @@ ul {
     font-family: 'Inter', sans-serif;
 }
 
+.project p {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #0C4A6E;
+    margin: 6px 0 0;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+}
+
 /* Style de la modale */
 .modal-bg {
     position: fixed;
@@ -441,13 +533,32 @@ ul {
     background: #FFFFFF;
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(14, 165, 233, 0.3);
-    padding: 32px 24px;
-    max-width: 90vw;
-    max-height: 80vh;
+    padding: 32px 28px;
+    max-width: 480px;
+    width: 92vw;
+    max-height: 82vh;
     overflow: auto;
     position: relative;
-    min-width: 320px;
+    min-width: 280px;
     border: 1px solid rgba(186, 230, 253, 0.5);
+    text-align: center;
+}
+
+#modal-body h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0C4A6E;
+    margin: 8px 0 12px;
+    line-height: 1.3;
+}
+
+#modal-body p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.75;
+    margin: 0 0 4px;
 }
 
 .modal-close {
@@ -486,6 +597,18 @@ ul {
 }
 
 .hackpad {
+    margin-top: 40px;
+}
+
+.electric-lighter {
+    margin-top: 40px;
+}
+
+.ttl-siren {
+    margin-top: 40px;
+}
+
+.rc-plane-3d {
     margin-top: 40px;
 }
 
@@ -591,7 +714,7 @@ ul {
 }
 
 #modal-body .tags-list {
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 12px;
     margin-bottom: 2px;
 }
@@ -621,7 +744,8 @@ ul {
 
 .progress-label {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8px;
     font-size: 0.82rem;
     font-weight: 600;
     color: #0C4A6E;
@@ -654,6 +778,7 @@ ul {
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 10px;
+    justify-content: center;
 }
 
 .progress-step {
@@ -667,3 +792,86 @@ ul {
 .step-done    { background: #DCFCE7; color: #14532D; }
 .step-current { background: #0284C7; color: #fff; }
 .step-todo    { background: #F1F5F9; color: #94A3B8; }
+
+/* ── Modal: images, video, links ── */
+.modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0 4px;
+    justify-content: center;
+}
+
+.modal-thumb {
+    width: auto;
+    max-width: 180px;
+    max-height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #BAE6FD;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.15);
+}
+
+.modal-video {
+    margin: 14px 0 4px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    max-width: 100%;
+}
+
+.modal-video iframe,
+.modal-video video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+}
+
+.modal-video-portrait {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-video-portrait iframe,
+.modal-video-portrait video {
+    aspect-ratio: 9 / 16;
+}
+
+.modal-links-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 14px 0 4px;
+}
+
+.modal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+    font-family: 'Inter', sans-serif;
+}
+
+.modal-link:hover {
+    opacity: 0.82;
+    transform: translateY(-1px);
+}
+
+.modal-link-github {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.modal-link-hackclub {
+    background: #ec3750;
+    color: #fff;
+}

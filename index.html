@@ -7,8 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GABIN TAVERNIER</title>
     </head>
-    <body style="padding-bottom: 80px;">
+    <body>
 
+        <!-- Full-page WIP splash -->
+        <div id="wip-splash">
+            <div id="wip-splash-inner">
+                <div class="wip-splash-stripes"></div>
+                <div class="wip-splash-card">
+                    <div class="wip-splash-icons">🚧</div>
+                    <h1 class="wip-splash-title">Work in progress</h1>
+                    <p class="wip-splash-sub">This site is still under construction.<br>More projects, photos &amp; details coming soon.</p>
+                    <button id="wip-enter-btn" onclick="document.getElementById('wip-splash').style.display='none'">Enter anyway &rarr;</button>
+                </div>
+            </div>
+        </div>
         <div id="header">
             <button id="hamburger" aria-label="Menu">
                 <span></span>
@@ -28,6 +40,7 @@
        
         <h2 id="projects"> <div>MY PROJECTS</div> </h1>
         <div class="projects-grid">
+            <!-- ✓ Completed -->
             <div class="project">
                 <span class="done-badge">✓ Completed</span>
                 <img src="./gabin rc plane.png" alt="RC Plane Project" width="200" height="200" />
@@ -43,11 +56,28 @@
                 <img src="fan plane reactor.png" alt="Fan Plane Reactor" width="200" height="200" />
                 <p>Fan Plane Reactor</p>
             </div>
+            <div class="project electric-lighter">
+                <span class="done-badge">✓ Completed</span>
+                <img src="el.png" alt="Electric Lighter" width="200" height="200" />
+                <p>Electric Lighter</p>
+            </div>
+            <div class="project ttl-siren">
+                <span class="done-badge">✓ Completed</span>
+                <img src="TTL.png" alt="TTL Siren" width="200" height="200" />
+                <p>TTL Siren</p>
+            </div>
+            <!-- ⚡ In Production -->
             <div class="project hackpad">
                 <span class="prod-badge">⚡ In Production</span>
                 <img src="hackpad.png" alt="HackPad - a custom macropad" width="230" height="160" />
                 <p>HackPad - a custom macropad</p>
             </div>
+            <div class="project rc-plane-3d">
+                <span class="prod-badge">⚡ In Production</span>
+                <img src="3D plane.png" alt="3D Printed RC Plane" width="200" height="200" />
+                <p>3D Printed RC Plane</p>
+            </div>
+            <!-- 🚧 In Development -->
             <div class="project devboard">
                 <span class="wip-badge">🚧 In Development</span>
                 <img src="devboard.png" alt="devboard" width="220" height="150" />
@@ -83,14 +113,6 @@
                     <!-- Le contenu du projet s'affichera ici -->
                 </div>
             </div>
-        </div>
-
-        <!-- Légende des badges -->
-        <button id="legend-btn" aria-label="Légende des badges">?</button>
-        <div id="legend-popup">
-            <p><span class="done-badge">✓ Completed</span> Finished / Shipped project</p>
-            <p><span class="prod-badge">⚡ In Production</span> Waiting for project parts</p>
-            <p><span class="wip-badge">🚧 In Development</span> Project at the design stage</p>
         </div>
 
        <script src="script.js" defer></script> 
