@@ -294,12 +294,13 @@ ul {
     line-height: 1;
     margin: 0;
     padding: 8px 0 0 0;
-    color: #ffffff;
+    color: #00ff88;
     font-family: 'VT323', monospace;
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: -1px;
     display: none;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
 }
 
 #description {
@@ -751,7 +752,10 @@ ul {
 }
 
 .skill-card {
-    padding: 0.4rem 0;
+    background: #111111;
+    border: 1px solid #252525;
+    border-radius: 8px;
+    padding: 1.6rem 1.8rem;
     text-align: left;
     margin-bottom: 1rem;
 }
@@ -785,9 +789,10 @@ ul {
 }
 
 .skill-card .tags-list {
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 0;
-    gap: 4px;
+    gap: 6px 6px;
+    row-gap: 8px;
 }
 
 /* Per-card accent colors */
@@ -1178,7 +1183,7 @@ ul {
 
     #hamburger { display: flex; }
 
-    #name, #description { display: block; }
+    #name { display: block; }
 
     #hero {
         flex-direction: column;
