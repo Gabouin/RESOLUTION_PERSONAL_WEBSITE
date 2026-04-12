@@ -1,4 +1,94 @@
 ﻿// ============================================================
+// TRANSLATIONS — EN / FR
+// ============================================================
+const TRANSLATIONS = {
+  "nav-projects":      { en: "Projects",                fr: "Projets" },
+  "nav-about":         { en: "About",                   fr: "À propos" },
+  "nav-skills":        { en: "Skills",                  fr: "Compétences" },
+  "nav-contact":       { en: "Contact",                 fr: "Contact" },
+  "mobile-subtitle":   { en: "Student \u2022 Maker \u2022 Aerospace Enthusiast", fr: "Étudiant \u2022 Maker \u2022 Passionné d'aérospatial" },
+  "wip-sub":           { en: "This site is still under construction.<br>More projects, photos &amp; details coming soon.", fr: "Ce site est encore en construction.<br>Plus de projets, photos &amp; détails arrivent bientôt." },
+  "wip-roadmap-label": { en: "// things coming next",  fr: "// à venir" },
+  "wip-r1":            { en: "Project photos &amp; better images",     fr: "Photos de projets &amp; meilleures images" },
+  "wip-r2":            { en: "Better overall colors",                  fr: "Meilleures couleurs globales" },
+  "wip-r3":            { en: "Details for every project",              fr: "Détails pour chaque projet" },
+  "wip-r4":            { en: "Demo videos for every project",          fr: "Vidéos démo pour chaque projet" },
+  "wip-r5":            { en: "improvment of the site structure",       fr: "Amélioration de la structure du site" },
+  "wip-r6":            { en: "More details about me",                  fr: "Plus de détails sur moi" },
+  "wip-enter":         { en: "Enter anyway \u2192",                    fr: "Entrer quand même \u2192" },
+  "greeting":          { en: "Hi, I'm",                               fr: "Salut, je suis" },
+  "hero-subtitle":     { en: "Student \u2022 Maker \u2022 Aerospace Enthusiast", fr: "Étudiant \u2022 Maker \u2022 Passionné d'aérospatial" },
+  "scroll-down-txt":   { en: "scroll down",                           fr: "défiler" },
+  "projects-title":    { en: "MY PROJECTS",                           fr: "MES PROJETS" },
+  "badge-done":        { en: "\u2713 Completed",                      fr: "\u2713 Terminé" },
+  "badge-prod":        { en: "\u26a1 In Production",                  fr: "\u26a1 En production" },
+  "badge-wip":         { en: "\uD83D\uDEA7 In Development",           fr: "\uD83D\uDEA7 En développement" },
+  "proj-rc-plane":     { en: "Remote Control Plane",                  fr: "Avion radiocommandé" },
+  "proj-space":        { en: "Space collector - arcade game",         fr: "Space Collector - jeu d'arcade" },
+  "proj-fan":          { en: "Fan Plane Reactor",                     fr: "Ventilateur en forme de réacteur d'avion" },
+  "proj-lighter":      { en: "Electric Lighter",                      fr: "Briquet électrique" },
+  "proj-ttl":          { en: "TTL Siren",                             fr: "Sirène TTL" },
+  "proj-hackpad":      { en: "HackPad - a custom macropad",           fr: "HackPad - un mini clavier personnalisé" },
+  "proj-3dplane":      { en: "3D Printed RC Plane",                   fr: "Avion RC imprimé en 3D" },
+  "proj-devboard":     { en: "APX Devboard - Custom Development Board", fr: "APX Devboard - Carte de développement" },
+  "proj-display":      { en: "Spotify Display - Real time Music controller", fr: "Spotify Display - Contrôleur musical en temps réel" },
+  "proj-cubesat":      { en: "CubeSat Project",                       fr: "Satellite CubeSat" },
+  "proj-robotic-arm":  { en: "AI enhanced Robotic Arm",               fr: "Bras robotique assisté par IA" },
+  "proj-launchapi":    { en: "Launch Watch API",                      fr: "API de lancements spatiaux" },
+  "about-title":       { en: "ABOUT ME",                              fr: "À PROPOS DE MOI" },
+  "about-p1":          { en: "Hi! I'm Gabin Tavernier, a student passionate about making, electronics, and aerospace.", fr: "Salut ! Je suis Gabin Tavernier, un étudiant passionné par l'électronique, l'aérospatial et qui adore fabriquer de nombreux projets." },
+  "about-p2":          { en: "I love building things from scratch : from custom development boards and macropads to RC planes and CubeSat projects.", fr: "J'adore construire des choses de zéro : en partant de cartes de développement et macropads sur mesure jusqu'aux avions RC et projets informatiques." },
+  "about-p3":          { en: "I'm always exploring new technologies, working on hands-on projects, and love learning new things !", fr: "J'explore constamment de nouvelles technologies, je travaille sur des projets concrets et j'adore apprendrecde nouvelles choses !" },
+  "skills-title":      { en: "MY SKILLS",                             fr: "MES COMPÉTENCES" },
+  "skill-prog":        { en: "Programming",                           fr: "Programmation" },
+  "skill-hw":          { en: "Hardware &amp; Electronics",            fr: "Matériel &amp; Électronique" },
+  "skill-pcb":         { en: "PCB &amp; CAD",                        fr: "PCB &amp; CAO" },
+  "skill-tools":       { en: "Tools &amp; Workflow",                  fr: "Outils &amp; Méthodes" },
+  "skill-domains":     { en: "Domains",                               fr: "Domaines" },
+  "skill-sec-langs":   { en: "Languages",                             fr: "Langages" },
+  "skill-sec-fw":      { en: "Firmware",                              fr: "Firmware" },
+  "skill-sec-mcus":    { en: "Microcontrollers",                      fr: "Microcontrôleurs" },
+  "skill-sec-sensors": { en: "Sensors &amp; Modules",                 fr: "Capteurs &amp; Modules" },
+  "skill-sec-tech":    { en: "Techniques",                            fr: "Techniques" },
+  "skill-sec-pcb":     { en: "PCB Design",                            fr: "Conception PCB" },
+  "skill-sec-3d":      { en: "3D / CAD",                              fr: "3D / CAO" },
+  "skill-sec-vc":      { en: "Version Control &amp; CI",              fr: "Contrôle de version &amp; CI" },
+  "skill-sec-env":     { en: "Environment",                           fr: "Environnement" },
+  "skill-sec-aero":    { en: "Aerospace",                             fr: "Aérospatial" },
+  "skill-sec-sys":     { en: "Systems",                               fr: "Systèmes" },
+  "contact-title":     { en: "CONTACT",                               fr: "CONTACT" },
+  "contact-intro":     { en: "Want to get in touch? Feel free to reach out through any of these platforms:", fr: "Vous souhaitez me contacter ? Retrouvez-moi sur ces plateformes :" }
+};
+
+const PROJECT_DETAILS_FR = {
+  "rc-plane":       { title: "Avion radiocommandé",           description: "Avion RC construit avec du polystyrène et des pièces imprimées en 3D. Utilise des servomoteurs, un moteur brushless, une hélice, un ESC, un récepteur et un émetteur. J'ai conçu la structure sur Canva et modélisé dans Fusion 360. L'avion est léger et vole bien, avec une autonomie d'environ 5 minutes." },
+  "space-collector":{ title: "Space Collector",              description: "Petit jeu arcade développé en JavaScript pour la console Sprig de Hack Club. Collecte des objets dans l'espace et évite les obstacles !" },
+  "fan-reactor":    { title: "Réacteur d'avion ventilateur", description: "Ventilateur imprimé en 3D ayant l'apparence d'un réacteur d'avion. Alimenté via USB-C, avec un interrupteur et un potentiomètre pour régler la vitesse du moteur." },
+  "electric-lighter":{ title: "Briquet électrique",          description: "Briquet électrique fabriqué à partir d'une batterie de puff trouvée, d'un module de charge, d'un élément chauffant de grille-pain et d'un boîtier imprimé en 3D." },
+  "ttl-siren":      { title: "Sirène de police TTL",         description: "Sirène construite avec un multivibrateur astable à transistors BJT, sans microcontrôleur. Deux transistors alternent pour faire clignoter des LEDs bleues et rouges. Le PCB est en forme de sirène." },
+  "hackpad":        { title: "HackPad",                      description: "Macropad personnalisé avec 6 touches, un encodeur rotatif, un écran OLED et un microcontrôleur RP2040. PCB conçu dans KiCad, boîtier dans Fusion 360." },
+  "3d-rc-plane":    { title: "Avion RC imprimé en 3D",       description: "La deuxième version de mon avion RC, entièrement imprimé en 3D avec du PLA gris léger et une meilleure aérodynamique. C'est un modèle entièrement nouveau." },
+  "apx-devboard":   { title: "APX Devboard",                 description: "APX signifie APEX. C'est une carte de développement personnalisée conçue pour les projets embarqués et le prototypage." },
+  "spotify-display":{ title: "Spotify Display",              description: "Afficheur Spotify temps réel basé sur ESP32 avec écran SPI. Affiche le titre en cours de lecture et permet de contrôler la musique sans toucher son téléphone." },
+  "cubesat":        { title: "Projet CubeSat",               description: "CubeSat étudiant équipé de capteurs, conçu pour être lancé dans la stratosphère avec un ballon météorologique. Planification de mission, conception PCB et intégration complète." },
+  "robotic-arm":    { title: "Bras robotique",               description: "Bras robotique construit avec de puissants servomoteurs récupérés d'un vieux robot humanoïde. Assisté par IA avec vision et contrôle pour l'automatisation." },
+  "launch-api":     { title: "API Launch Watch",             description: "API REST hébergée sur Raspberry Pi pour suivre les lancements de fusées et événements spatiaux en temps réel. Compile des données de plusieurs sources." }
+};
+
+function applyLang(lang) {
+  window._currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    var t = TRANSLATIONS[key];
+    if (t && t[lang] !== undefined) el.innerHTML = t[lang];
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.textContent = lang === 'en' ? 'FR' : 'EN';
+  });
+}
+
+// ============================================================
 // PROJECT CONFIG — Edit here to update tags & progress
 // ============================================================
 
@@ -212,11 +302,14 @@ function buildModalVideoHTML(key) {
 }
 
 function buildModalHTML(key, badgeHTML) {
-  const d = PROJECT_DETAILS[key];
-  if (!d) return '';
+  var base = PROJECT_DETAILS[key];
+  if (!base) return '';
+  var fr = (window._currentLang === 'fr' && PROJECT_DETAILS_FR[key]) ? PROJECT_DETAILS_FR[key] : {};
+  var title = fr.title || base.title;
+  var description = fr.description || base.description;
   return badgeHTML +
-    '<h2>' + d.title + '</h2>' +
-    '<p>' + d.description + '</p>' +
+    '<h2>' + title + '</h2>' +
+    '<p>' + description + '</p>' +
     buildModalImagesHTML(key) +
     buildModalVideoHTML(key) +
     buildLinksHTML(key) +
@@ -288,6 +381,15 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Language toggle
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      applyLang(window._currentLang === 'fr' ? 'en' : 'fr');
+    });
+  });
+  // Init language from localStorage
+  applyLang(localStorage.getItem('lang') || 'en');
+
   // Legend popup
   const legendBtn = document.getElementById('legend-btn');
   const legendPopup = document.getElementById('legend-popup');
@@ -304,3 +406,71 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// ── WIP roadmap toggle ──
+(function() {
+  var btn = document.getElementById('wip-roadmap-btn');
+  var panel = document.getElementById('wip-roadmap');
+  if (!btn || !panel) return;
+  btn.addEventListener('click', function() {
+    var open = panel.classList.toggle('open');
+    btn.textContent = open ? '// what\'s coming \u2191' : '// what\'s coming \u2193';
+  });
+})();
+
+// ── Binary rain on WIP splash ──
+(function() {
+  var canvas = document.getElementById('wip-canvas');
+  if (!canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var fontSize = 13;
+  var cols, drops;
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    cols  = Math.floor(canvas.width / fontSize);
+    drops = Array.from({ length: cols }, function() {
+      return Math.floor(Math.random() * -50);
+    });
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.font = fontSize + 'px "Fira Code", monospace';
+
+    for (var i = 0; i < drops.length; i++) {
+      var bright = Math.random() > 0.92;
+      ctx.fillStyle = bright ? '#ffffff' : '#00ff88';
+      var char = Math.random() > 0.5 ? '1' : '0';
+      ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.97) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+
+  var rafId;
+  var frame = 0;
+  function loop() {
+    frame++;
+    if (frame % 3 === 0) draw();
+    rafId = requestAnimationFrame(loop);
+  }
+  loop();
+
+  // Stop animation when splash is dismissed to save resources
+  var wipBtn = document.getElementById('wip-enter-btn');
+  if (wipBtn) {
+    wipBtn.addEventListener('click', function() {
+      cancelAnimationFrame(rafId);
+    });
+  }
+})();

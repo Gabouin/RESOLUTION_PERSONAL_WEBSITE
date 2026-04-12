@@ -9,23 +9,36 @@
     <body>
 
         <div id="header">
+            <!-- Desktop nav -->
+            <span id="nav-logo">GABIN TAVERNIER</span>
+            <nav id="nav-desktop">
+                <a href="index.html" class="nav-link" data-i18n="nav-projects">Projects</a>
+                <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+                <a href="skills.html" class="nav-link active" data-i18n="nav-skills">Skills</a>
+            </nav>
+            <div id="contact-btn-wrap">
+                <a href="contact.html"><button id="contact-btn" data-i18n="nav-contact">Contact</button></a>
+                <button class="lang-btn">FR</button>
+            </div>
+            <!-- Mobile only -->
             <button id="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <h1 id="name"> <div>GABIN TAVERNIER</div> </h1>
-            <h3 id="description"> Student • Maker • Aerospace Enthusiast </h3>
+            <h3 id="description" data-i18n="mobile-subtitle"> Student &bull; Maker &bull; Aerospace Enthusiast </h3>
             <nav id="nav-dropdown">
-                <a href="index.html" class="nav-link">Projects</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="skills.html" class="nav-link active">Skills</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link" data-i18n="nav-projects">Projects</a>
+                <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+                <a href="skills.html" class="nav-link active" data-i18n="nav-skills">Skills</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a>
+                <button class="lang-btn lang-btn-mobile">FR</button>
             </nav>
         </div>
 
         <div class="page-content">
-            <h2 id="projects">MY SKILLS</h2>
+            <h2 id="projects" data-i18n="skills-title">MY SKILLS</h2>
 
             <div class="skills-grid">
 
@@ -33,9 +46,9 @@
 
                     <!-- CARD 1 — PROGRAMMING -->
                     <div class="skill-card skill-card--prog">
-                        <div class="skill-card-title">Programming</div>
+                        <div class="skill-card-title" data-i18n="skill-prog">Programming</div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Languages</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-langs">Languages</div>
                             <div class="tags-list">
                                 <span class="tag">Python</span>
                                 <span class="tag">C</span>
@@ -44,7 +57,7 @@
                             </div>
                         </div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Firmware</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-fw">Firmware</div>
                             <div class="tags-list">
                                 <span class="tag tag--gray">QMK</span>
                                 <span class="tag tag--gray">Arduino IDE</span>
@@ -55,9 +68,9 @@
 
                     <!-- CARD 2 — HARDWARE & ELECTRONICS -->
                     <div class="skill-card skill-card--hw">
-                        <div class="skill-card-title">Hardware &amp; Electronics</div>
+                        <div class="skill-card-title" data-i18n="skill-hw">Hardware &amp; Electronics</div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Microcontrollers</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-mcus">Microcontrollers</div>
                             <div class="tags-list">
                                 <span class="tag">Arduino Uno/Nano</span>
                                 <span class="tag">ESP32</span>
@@ -65,7 +78,7 @@
                             </div>
                         </div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Sensors &amp; Modules</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-sensors">Sensors &amp; Modules</div>
                             <div class="tags-list">
                                 <span class="tag tag--gray">BMP280</span>
                                 <span class="tag tag--gray">DHT22</span>
@@ -75,7 +88,7 @@
                             </div>
                         </div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Techniques</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-tech">Techniques</div>
                             <div class="tags-list">
                                 <span class="tag">SMD Soldering</span>
                                 <span class="tag">PCB Assembly</span>
@@ -86,9 +99,9 @@
 
                     <!-- CARD 3 — PCB & CAD -->
                     <div class="skill-card skill-card--pcb">
-                        <div class="skill-card-title">PCB &amp; CAD</div>
+                        <div class="skill-card-title" data-i18n="skill-pcb">PCB &amp; CAD</div>
                         <div class="skill-section">
-                            <div class="skill-section-label">PCB Design</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-pcb">PCB Design</div>
                             <div class="tags-list">
                                 <span class="tag">KiCad</span>
                                 <span class="tag">Schematic Design</span>
@@ -96,7 +109,7 @@
                             </div>
                         </div>
                         <div class="skill-section">
-                            <div class="skill-section-label">3D / CAD</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-3d">3D / CAD</div>
                             <div class="tags-list">
                                 <span class="tag">Fusion 360</span>
                                 <span class="tag">3D Printing FDM</span>
@@ -113,9 +126,9 @@
 
                     <!-- CARD 4 — TOOLS & WORKFLOW -->
                     <div class="skill-card skill-card--soft">
-                        <div class="skill-card-title">Tools &amp; Workflow</div>
+                        <div class="skill-card-title" data-i18n="skill-tools">Tools &amp; Workflow</div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Version Control &amp; CI</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-vc">Version Control &amp; CI</div>
                             <div class="tags-list">
                                 <span class="tag">Git</span>
                                 <span class="tag">GitHub</span>
@@ -123,7 +136,7 @@
                             </div>
                         </div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Environment</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-env">Environment</div>
                             <div class="tags-list">
                                 <span class="tag">Linux</span>
                                 <span class="tag">VS Code</span>
@@ -133,9 +146,9 @@
 
                     <!-- CARD 5 — DOMAINS -->
                     <div class="skill-card skill-card--domain">
-                        <div class="skill-card-title">Domains</div>
+                        <div class="skill-card-title" data-i18n="skill-domains">Domains</div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Aerospace</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-aero">Aerospace</div>
                             <div class="tags-list">
                                 <span class="tag">Aeronautics (BIA)</span>
                                 <span class="tag">CubeSat</span>
@@ -143,7 +156,7 @@
                             </div>
                         </div>
                         <div class="skill-section">
-                            <div class="skill-section-label">Systems</div>
+                            <div class="skill-section-label" data-i18n="skill-sec-sys">Systems</div>
                             <div class="tags-list">
                                 <span class="tag">Embedded Systems</span>
                                 <span class="tag">IoT</span>
