@@ -15,7 +15,7 @@ const TRANSLATIONS = {
   "wip-r4":            { en: "Demo videos for every project",          fr: "Vidéos démo pour chaque projet" },
   "wip-r5":            { en: "improvment of the site structure",       fr: "Amélioration de la structure du site" },
   "wip-r6":            { en: "More details about me",                  fr: "Plus de détails sur moi" },
-  "wip-enter":         { en: "Enter anyway \u2192",                    fr: "Entrer quand même \u2192" },
+  "wip-enter":         { en: "See my projects \u2192",                  fr: "Voir mes projets \u2192" },
   "greeting":          { en: "Hi, I'm",                               fr: "Salut, je suis" },
   "hero-subtitle":     { en: "Student \u2022 Maker \u2022 Aerospace Enthusiast", fr: "Étudiant \u2022 Maker \u2022 Passionné d'aérospatial" },
   "scroll-down-txt":   { en: "scroll down",                           fr: "défiler" },
@@ -34,11 +34,11 @@ const TRANSLATIONS = {
   "proj-display":      { en: "Spotify Display - Real time Music controller", fr: "Spotify Display - Contrôleur musical en temps réel" },
   "proj-cubesat":      { en: "CubeSat Project",                       fr: "Satellite CubeSat" },
   "proj-robotic-arm":  { en: "AI enhanced Robotic Arm",               fr: "Bras robotique assisté par IA" },
-  "proj-launchapi":    { en: "Launch Watch API",                      fr: "API de lancements spatiaux" },
+  "proj-launchapi":    { en: "Rocket Launch API",                     fr: "API de lancements de fusées" },
   "about-title":       { en: "ABOUT ME",                              fr: "À PROPOS DE MOI" },
-  "about-p1":          { en: "Hi! I'm Gabin Tavernier, a student passionate about making, electronics, and aerospace.", fr: "Salut ! Je suis Gabin Tavernier, un étudiant passionné par l'électronique, l'aérospatial et qui adore fabriquer de nombreux projets." },
-  "about-p2":          { en: "I love building things from scratch : from custom development boards and macropads to RC planes and CubeSat projects.", fr: "J'adore construire des choses de zéro : en partant de cartes de développement et macropads sur mesure jusqu'aux avions RC et projets informatiques." },
-  "about-p3":          { en: "I'm always exploring new technologies, working on hands-on projects, and love learning new things !", fr: "J'explore constamment de nouvelles technologies, je travaille sur des projets concrets et j'adore apprendrecde nouvelles choses !" },
+  "about-p1":          { en: "I'm Gabin Tavernier, a student from La Réunion passionate about aerospace, electronics, and building things that actually work.", fr: "Je suis Gabin Tavernier, un étudiant de La Réunion passionné par l'aérospatial, l'électronique et la fabrication de projets concrets." },
+  "about-p2":          { en: "I design custom PCBs with KiCad, program microcontrollers (RP2040, ESP32) in C/C++ and Python, and build everything from macropads to stratospheric balloon payloads with LoRa telemetry. I'm currently preparing for the BIA (Aeronautics Initiation Diploma) and aiming for CPGE then ISAE-SUPAERO.", fr: "Je conçois des PCBs avec KiCad, programme des microcontrôleurs (RP2040, ESP32) en C/C++ et Python, et construis tout, des macropads jusqu'aux charges utiles de ballons strat. J'ai obtenu mon BIA en 2024 et vise une CPGE puis l'ISAE-SUPAERO." },
+  "about-p3":          { en: "I'm active in <a href=\"https://hackclub.com\" target=\"_blank\" rel=\"noopener\">Hack Club</a> and I've participated in programs like Blueprint, Stasis, and various YSWS grants to fund my hardware projects.", fr: "Je suis actif sur <a href=\"https://hackclub.com\" target=\"_blank\" rel=\"noopener\">Hack Club</a> et j'ai participé aux programmes Blueprint, Stasis et divers autres programmes YSWS pour financer mes projets." },
   "skills-title":      { en: "MY SKILLS",                             fr: "MES COMPÉTENCES" },
   "skill-prog":        { en: "Programming",                           fr: "Programmation" },
   "skill-hw":          { en: "Hardware &amp; Electronics",            fr: "Matériel &amp; Électronique" },
@@ -57,7 +57,26 @@ const TRANSLATIONS = {
   "skill-sec-aero":    { en: "Aerospace",                             fr: "Aérospatial" },
   "skill-sec-sys":     { en: "Systems",                               fr: "Systèmes" },
   "contact-title":     { en: "CONTACT",                               fr: "CONTACT" },
-  "contact-intro":     { en: "Want to get in touch? Feel free to reach out through any of these platforms:", fr: "Vous souhaitez me contacter ? Retrouvez-moi sur ces plateformes :" }
+  "contact-intro":     { en: "Want to get in touch? Feel free to reach out through any of these platforms:", fr: "Vous souhaitez me contacter ? Retrouvez-moi sur ces plateformes :" },
+  "tag-smd-soldering":   { en: "SMD Soldering",        fr: "Soudure CMS" },
+  "tag-pcb-assembly":    { en: "PCB Assembly",          fr: "Assemblage PCB" },
+  "tag-rc-electronics":  { en: "RC Electronics",        fr: "Électronique RC" },
+  "tag-schematic-design":{ en: "Schematic Design",      fr: "Conception schématique" },
+  "tag-pcb-layout":      { en: "PCB Layout",            fr: "Routage PCB" },
+  "tag-3d-printing":     { en: "3D Printing FDM",       fr: "Impression 3D FDM" },
+  "tag-aeronautics":     { en: "Aeronautics (BIA)",     fr: "Aéronautique (BIA)" },
+  "tag-strato-balloon":  { en: "Stratospheric Balloon", fr: "Ballon stratosphérique" },
+  "tag-embedded-sys":    { en: "Embedded Systems",      fr: "Systèmes embarqués" },
+  "tag-maker-diy":       { en: "Maker / DIY Hardware",  fr: "Maker / Électronique DIY" },
+  "filter-domain":     { en: "Domain",        fr: "Domaine" },
+  "filter-difficulty": { en: "Difficulty",    fr: "Difficulté" },
+  "filter-all":        { en: "All",           fr: "Tous" },
+  "filter-hardware":   { en: "Hardware",      fr: "Matériel" },
+  "filter-software":   { en: "Software",      fr: "Logiciel" },
+  "filter-aerospace":  { en: "Aerospace",     fr: "Aérospatial" },
+  "filter-beginner":   { en: "Beginner",      fr: "Débutant" },
+  "filter-inter":      { en: "Intermediate",  fr: "Intermédiaire" },
+  "filter-advanced":   { en: "Advanced",      fr: "Avancé" }
 };
 
 const PROJECT_DETAILS_FR = {
@@ -72,7 +91,7 @@ const PROJECT_DETAILS_FR = {
   "spotify-display":{ title: "Spotify Display",              description: "Afficheur Spotify temps réel basé sur ESP32 avec écran SPI. Affiche le titre en cours de lecture et permet de contrôler la musique sans toucher son téléphone." },
   "cubesat":        { title: "Projet CubeSat",               description: "CubeSat étudiant équipé de capteurs, conçu pour être lancé dans la stratosphère avec un ballon météorologique. Planification de mission, conception PCB et intégration complète." },
   "robotic-arm":    { title: "Bras robotique",               description: "Bras robotique construit avec de puissants servomoteurs récupérés d'un vieux robot humanoïde. Assisté par IA avec vision et contrôle pour l'automatisation." },
-  "launch-api":     { title: "API Launch Watch",             description: "API REST hébergée sur Raspberry Pi pour suivre les lancements de fusées et événements spatiaux en temps réel. Compile des données de plusieurs sources." }
+  "launch-api":     { title: "API Rocket Launch",             description: "API REST hébergée sur Raspberry Pi pour suivre les lancements de fusées et événements spatiaux en temps réel. Compile des données de plusieurs sources." }
 };
 
 function applyLang(lang) {
@@ -117,17 +136,37 @@ const PROJECT_CONFIG = {
 // Tag format: [label, category]  —  categories: lang | hw | fab | tool | domain
 const PROJECT_TAGS = {
   "rc-plane":        [["RC Electronics","hw"],      ["Aerodynamics","domain"],      ["Servo Control","hw"]],
-  "space-collector": [["Python","lang"],            ["Game Dev","domain"],          ["Pygame","lang"]],
+  "space-collector": [["JavaScript","lang"],        ["Game Dev","domain"],          ["Bitmap","lang"]],
   "fan-reactor":     [["CAD","tool"],               ["Electronics","hw"],           ["Motor","hw"]],
   "hackpad":         [["RP2040","hw"],              ["KMK","tool"],                 ["PCB Design","tool"]],
   "apx-devboard":    [["PCB Design","tool"],        ["Embedded Systems","domain"],  ["KiCad","tool"]],
-  "spotify-display": [["ESP32","hw"],               ["C++","lang"],                 ["Spotify API","tool"],  ["SPI Display","hw"]],
+  "spotify-display": [["ESP32","hw"],               ["C++ (arduino IDE)","lang"],   ["Spotify API","tool"],  ["SPI Display","hw"]],
   "cubesat":         [["Aerospace","domain"],       ["Embedded Systems","domain"],  ["PCB Design","tool"],   ["Sensors","hw"]],
   "robotic-arm":     [["ESP32","hw"],               ["Servo Control","hw"],         ["C++","lang"],          ["AI","domain"],   ["Robotics","domain"]],
   "launch-api":      [["Raspberry Pi","hw"],        ["Python","lang"],              ["REST API","tool"],     ["Web Server","tool"]],
   "3d-rc-plane":     [["RC Electronics","hw"],      ["CAD","tool"],                 ["Light Weight 3D Printing","fab"],   ["Aerodynamics","domain"]],
   "electric-lighter":[["Basic Hardware","hw"],     ["Heating elements","hw"],      ["3D Printing","fab"]],
   "ttl-siren":       [["TTL Logic","hw"],           ["Electronic Simulation","hw"],           ["PCB Design","tool"]]
+};
+
+// ============================================================
+
+// ============================================================
+// PROJECT META — domain & difficulty for filters
+// ============================================================
+const PROJECT_META = {
+  "rc-plane":         { domain: ["aerospace", "hardware"],          difficulty: "intermediate" },
+  "space-collector":  { domain: ["software"],                       difficulty: "beginner" },
+  "fan-reactor":      { domain: ["hardware"],                       difficulty: "beginner" },
+  "electric-lighter": { domain: ["hardware"],                       difficulty: "beginner" },
+  "ttl-siren":        { domain: ["hardware"],                       difficulty: "intermediate" },
+  "hackpad":          { domain: ["hardware", "software"],           difficulty: "intermediate" },
+  "3d-rc-plane":      { domain: ["aerospace", "hardware"],          difficulty: "intermediate" },
+  "apx-devboard":     { domain: ["hardware"],                       difficulty: "intermediate" },
+  "spotify-display":  { domain: ["software", "hardware"],           difficulty: "beginner" },
+  "cubesat":          { domain: ["aerospace", "hardware"],          difficulty: "advanced" },
+  "robotic-arm":      { domain: ["hardware", "software"],           difficulty: "advanced" },
+  "launch-api":       { domain: ["software"],                       difficulty: "advanced" }
 };
 
 // ============================================================
@@ -228,7 +267,7 @@ const PROJECT_DETAILS = {
     hackclub: [{ url: "https://stasis.hackclub.com/dashboard/projects/cmmyufcqi00i501rye3hjri9z", label: "Hack Club" }]
   },
   "launch-api": {
-    title: "Launch Watch API",
+    title: "Rocket Launch API",
     description: "REST API hosted on a Raspberry Pi for tracking rocket launches and space events in real time. Aggregates data from multiple sources.",
     images: ["raspapi.png"],
     video: null,
@@ -390,6 +429,34 @@ window.addEventListener('DOMContentLoaded', function() {
   // Init language from localStorage
   applyLang(localStorage.getItem('lang') || 'en');
 
+  // ── Project filters ──────────────────────────────────────
+  var activeFilters = { domain: 'all', difficulty: 'all' };
+
+  function applyProjectFilters() {
+    document.querySelectorAll('.projects-grid .project[data-key]').forEach(function(card) {
+      var key = card.getAttribute('data-key');
+      var meta = PROJECT_META[key];
+      if (!meta) return;
+      var domainOk = activeFilters.domain === 'all' || meta.domain.includes(activeFilters.domain);
+      var diffOk   = activeFilters.difficulty === 'all' || meta.difficulty === activeFilters.difficulty;
+      card.classList.toggle('hidden-by-filter', !(domainOk && diffOk));
+    });
+  }
+
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var group = btn.getAttribute('data-filter');
+      var value = btn.getAttribute('data-value');
+      activeFilters[group] = value;
+      document.querySelectorAll('.filter-btn[data-filter="' + group + '"]').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      applyProjectFilters();
+    });
+  });
+  // ─────────────────────────────────────────────────────────
+
   // Legend popup
   const legendBtn = document.getElementById('legend-btn');
   const legendPopup = document.getElementById('legend-popup');
@@ -416,6 +483,207 @@ window.addEventListener('DOMContentLoaded', function() {
     var open = panel.classList.toggle('open');
     btn.textContent = open ? '// what\'s coming \u2191' : '// what\'s coming \u2193';
   });
+})();
+
+// ── Global binary reveal on mouse ──
+(function() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var canvas = document.getElementById('binary-canvas');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'binary-canvas';
+    document.body.appendChild(canvas);
+  }
+  var ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  var fontSize = 12;
+  var charW = fontSize * 0.6;  // approx monospace width
+  var radius = 25;
+  var trailMax = 40;
+  var trail = [];
+  var pointer = { x: -999, y: -999 };
+  var lastMoveTime = 0;
+  var fadeDelay = 300;
+  var resumeBoost = 1;     // multiplier that ramps 0→1 when resuming mid-fade
+  var resumeStart = 0;     // timestamp when movement resumed
+  var wasFading = false;    // was the effect fading when mouse moved again?
+  var rampUpDuration = 400; // ms to ramp back to full brightness
+
+  // Interpolate between two points so trail stays dense even at fast moves
+  function addTrailPoint(x, y) {
+    // Detect resume mid-fade: capture current fade level
+    var now = Date.now();
+    var elapsed = now - lastMoveTime;
+    if (elapsed > fadeDelay && !wasFading) {
+      wasFading = true;
+    }
+    if (wasFading) {
+      // Compute what trailFade/globalFade were just before this move
+      var oldTrailFade = Math.max(0, 1 - (elapsed - fadeDelay) / 800);
+      var oldGlobalFade = elapsed > fadeDelay + 800
+        ? Math.max(0, 1 - (elapsed - fadeDelay - 800) / 1200) : 1;
+      resumeBoost = Math.min(oldTrailFade, oldGlobalFade);
+      resumeBoost = Math.max(0.01, resumeBoost);
+      resumeStart = now;
+      wasFading = false;
+      // Clear old trail points so they don't pop back
+      trail.length = 0;
+    }
+
+    if (trail.length > 0) {
+      var last = trail[trail.length - 1];
+      var dx = x - last.x, dy = y - last.y;
+      var dist = Math.sqrt(dx * dx + dy * dy);
+      var step = charW * 2;
+      if (dist > step) {
+        var n = Math.floor(dist / step);
+        for (var i = 1; i <= n; i++) {
+          trail.push({ x: last.x + dx * (i / (n + 1)), y: last.y + dy * (i / (n + 1)) });
+        }
+      }
+    }
+    trail.push({ x: x, y: y });
+    while (trail.length > trailMax) trail.shift();
+    lastMoveTime = now;
+  }
+
+  // Stable grid of real binary bytes
+  var gridCols = 0, gridRows = 0, grid = [];
+  function buildGrid() {
+    gridCols = Math.ceil(window.innerWidth / charW) + 2;
+    gridRows = Math.ceil(window.innerHeight / fontSize) + 2;
+    grid = [];
+    for (var r = 0; r < gridRows; r++) {
+      var row = '';
+      while (row.length < gridCols) {
+        row += ('00000000' + Math.floor(Math.random() * 256).toString(2)).slice(-8);
+      }
+      grid.push(row);
+    }
+  }
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    buildGrid();
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  document.addEventListener('mousemove', function(e) {
+    pointer.x = e.clientX;
+    pointer.y = e.clientY;
+    addTrailPoint(e.clientX, e.clientY);
+  }, { passive: true });
+  document.addEventListener('touchmove', function(e) {
+    if (e.touches && e.touches[0]) {
+      pointer.x = e.touches[0].clientX;
+      pointer.y = e.touches[0].clientY;
+      addTrailPoint(pointer.x, pointer.y);
+    }
+  }, { passive: true });
+  // Scroll counts as movement — shift trail by scroll delta to leave a trace
+  var lastScrollY = window.scrollY || window.pageYOffset || 0;
+  window.addEventListener('scroll', function() {
+    var sy = window.scrollY || window.pageYOffset || 0;
+    var dy = sy - lastScrollY;
+    lastScrollY = sy;
+    if (pointer.x < -900) return;
+    // Shift existing trail points so they appear to stick to the page
+    for (var i = 0; i < trail.length; i++) {
+      trail[i].y -= dy;
+    }
+    // Add current pointer position as new point
+    addTrailPoint(pointer.x, pointer.y);
+  }, { passive: true });
+
+  function draw() {
+    var now = Date.now();
+    var elapsed = now - lastMoveTime;
+
+    // Ramp-up multiplier when resuming mid-fade
+    var ramp = 1;
+    if (resumeBoost < 1) {
+      var rampElapsed = now - resumeStart;
+      ramp = resumeBoost + (1 - resumeBoost) * Math.min(1, rampElapsed / rampUpDuration);
+      if (ramp >= 0.99) { resumeBoost = 1; ramp = 1; }
+    }
+
+    // trailFade: trail behind cursor fades 1→0 over 800ms
+    var trailFade = 1;
+    if (elapsed > fadeDelay) {
+      trailFade = Math.max(0, 1 - (elapsed - fadeDelay) / 800);
+    }
+    // globalFade: cursor zone fades 1→0 over 1.2s, starts when trail is gone
+    var globalFade = 1;
+    if (elapsed > fadeDelay + 800) {
+      globalFade = Math.max(0, 1 - (elapsed - fadeDelay - 800) / 1200);
+    }
+
+    // Apply ramp to both fades
+    trailFade *= ramp;
+    globalFade *= ramp;
+
+    // Clear trail when everything fully faded
+    if (trailFade <= 0 && globalFade <= 0) { trail.length = 0; }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (trail.length === 0) { requestAnimationFrame(draw); return; }
+
+    ctx.font = fontSize + 'px "Fira Code", monospace';
+    ctx.textBaseline = 'top';
+
+    // For each cell, find max opacity from all trail points
+    var startCol = gridCols, endCol = 0, startRow = gridRows, endRow = 0;
+    // Compute bounding box of all trail points
+    for (var t = 0; t < trail.length; t++) {
+      var r0 = radius + (t === trail.length - 1 ? 2 : 0);
+      var sc = Math.max(0, Math.floor((trail[t].x - r0) / charW) - 1);
+      var ec = Math.min(gridCols, Math.ceil((trail[t].x + r0) / charW) + 1);
+      var sr = Math.max(0, Math.floor((trail[t].y - r0) / fontSize) - 1);
+      var er = Math.min(gridRows, Math.ceil((trail[t].y + r0) / fontSize) + 1);
+      if (sc < startCol) startCol = sc;
+      if (ec > endCol) endCol = ec;
+      if (sr < startRow) startRow = sr;
+      if (er > endRow) endRow = er;
+    }
+
+    for (var r = startRow; r < endRow; r++) {
+      for (var c = startCol; c < endCol; c++) {
+        var ch = grid[r] ? grid[r][c] : '0';
+        var cx = c * charW + charW * 0.5;
+        var cy = r * fontSize + fontSize * 0.5;
+
+        // Find best opacity from trail
+        var bestOp = 0;
+        for (var t = 0; t < trail.length; t++) {
+          var age = (t + 1) / trail.length; // 0→1
+          // Trail points fade with trailFade, newest point (cursor) fades with globalFade
+          var pointFade = (t === trail.length - 1) ? globalFade : (age * trailFade);
+          var dx = cx - trail[t].x;
+          var dy = cy - trail[t].y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < radius) {
+            var falloff = 1 - dist / radius;
+            var op = pointFade * falloff;
+            if (op > bestOp) bestOp = op;
+          }
+        }
+        if (bestOp < 0.01) continue;
+
+        var bright = (ch === '1' && Math.random() > 0.8);
+        ctx.fillStyle = bright
+          ? 'rgba(200,255,230,' + (bestOp * 0.9).toFixed(2) + ')'
+          : 'rgba(0,255,136,' + (bestOp * 0.55).toFixed(2) + ')';
+        ctx.fillText(ch, c * charW, r * fontSize);
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+  draw();
 })();
 
 // ── Binary rain on WIP splash ──
