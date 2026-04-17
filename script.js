@@ -28,6 +28,7 @@ const TRANSLATIONS = {
   "proj-fan":          { en: "Fan Plane Reactor",                     fr: "Ventilateur en forme de réacteur d'avion" },
   "proj-lighter":      { en: "Electric Lighter",                      fr: "Briquet électrique" },
   "proj-ttl":          { en: "TTL Siren",                             fr: "Sirène TTL" },
+  "proj-lamped":       { en: "Lamped - Custom Lamp Project",          fr: "Lamped - Projet de lampe personnalisée" },
   "proj-hackpad":      { en: "HackPad - a custom macropad",           fr: "HackPad - un mini clavier personnalisé" },
   "proj-3dplane":      { en: "3D Printed RC Plane",                   fr: "Avion RC imprimé en 3D" },
   "proj-devboard":     { en: "APX Devboard - Custom Development Board", fr: "APX Devboard - Carte de développement" },
@@ -35,6 +36,8 @@ const TRANSLATIONS = {
   "proj-cubesat":      { en: "CubeSat Project",                       fr: "Satellite CubeSat" },
   "proj-robotic-arm":  { en: "AI enhanced Robotic Arm",               fr: "Bras robotique assisté par IA" },
   "proj-launchapi":    { en: "Rocket Launch API",                     fr: "API de lancements de fusées" },
+  "proj-binary":       { en: "Binary Counter",                        fr: "Compteur binaire" },
+  "proj-lamped":       { en: "Lamped - Custom Lamp Project",          fr: "Lamped - Projet de lampe personnalisée" },
   "about-title":       { en: "ABOUT ME",                              fr: "À PROPOS DE MOI" },
   "about-p1":          { en: "I'm Gabin Tavernier, a student from La Réunion passionate about aerospace, electronics, and building things that actually work.", fr: "Je suis Gabin Tavernier, un étudiant de La Réunion passionné par l'aérospatial, l'électronique et la fabrication de projets concrets." },
   "about-p2":          { en: "I design custom PCBs with KiCad, program microcontrollers (RP2040, ESP32) in C/C++ and Python, and build everything from macropads to stratospheric balloon payloads with LoRa telemetry. I'm currently preparing for the BIA (Aeronautics Initiation Diploma) and aiming for CPGE then ISAE-SUPAERO.", fr: "Je conçois des PCBs avec KiCad, programme des microcontrôleurs (RP2040, ESP32) en C/C++ et Python, et construis tout, des macropads jusqu'aux charges utiles de ballons strat. J'ai obtenu mon BIA en 2024 et vise une CPGE puis l'ISAE-SUPAERO." },
@@ -91,7 +94,9 @@ const PROJECT_DETAILS_FR = {
   "spotify-display":{ title: "Spotify Display",              description: "Afficheur Spotify temps réel basé sur ESP32 avec écran SPI. Affiche le titre en cours de lecture et permet de contrôler la musique sans toucher son téléphone." },
   "cubesat":        { title: "Projet CubeSat",               description: "CubeSat étudiant équipé de capteurs, conçu pour être lancé dans la stratosphère avec un ballon météorologique. Planification de mission, conception PCB et intégration complète." },
   "robotic-arm":    { title: "Bras robotique",               description: "Bras robotique construit avec de puissants servomoteurs récupérés d'un vieux robot humanoïde. Assisté par IA avec vision et contrôle pour l'automatisation." },
-  "launch-api":     { title: "API Rocket Launch",             description: "API REST hébergée sur Raspberry Pi pour suivre les lancements de fusées et événements spatiaux en temps réel. Compile des données de plusieurs sources." }
+  "launch-api":     { title: "API Spatiale",            description: "API REST hébergée sur Raspberry Pi pour suivre les lancements de fusées et événements spatiaux en temps réel. Compile des données de plusieurs sources." },
+  "binary":         { title: "Visualisation binaire",        description: "Compteur binaire construit avec des LEDs et un circuit intégré. Les LEDS clignotent pour représenter les bits. La première LED va clignoter 8192 fois avant que la dernière LED clignote." },
+  "lamped":         { title: "Lamped",                       description: "Projet de lampe personnalisée simple avec un circuits intégré (LM3914). Le potentiomètre allume les LED une par une et ajuste la luminosité globale, créant un effet visuel intéressant. Le PCB est conçu en forme d'ampoule et utilise un circuit simple." }
 };
 
 function applyLang(lang) {
@@ -113,9 +118,9 @@ function applyLang(lang) {
 
 // Order matches the project cards in index.html: Completed → In Production → In Development
 const PROJECT_KEYS = [
-  "rc-plane", "space-collector", "fan-reactor", "electric-lighter", "ttl-siren",
+  "rc-plane", "space-collector", "fan-reactor", "electric-lighter", "ttl-siren", "binary", "lamped",
   "hackpad", "3d-rc-plane",
-  "apx-devboard", "spotify-display", "cubesat", "robotic-arm", "launch-api"
+  "apx-devboard", "spotify-display", "cubesat", "robotic-arm", "launch-api",
 ];
 
 const PROJECT_CONFIG = {
@@ -129,8 +134,10 @@ const PROJECT_CONFIG = {
   "robotic-arm":     { progress: 5,  steps: ["Concept", "Mechanical Design", "Electronics", "AI Integration", "Testing"], currentStep: 0 },
   "launch-api":      { progress: 5,  steps: ["API Design", "Data Sources", "Backend", "Deployment"],                   currentStep: 0 },
   "3d-rc-plane":     { progress: 20, steps: ["Design", "3D Print", "Electronics", "Assembly", "Test Flight"],           currentStep: 1 },
-  "electric-lighter": { progress: 100, steps: ["Design", "Electronics", "3D Print", "Assembly", "Testing"],            currentStep: 4 },
-  "ttl-siren":        { progress: 100, steps: ["Idea", "Simulation", "Schematic Design", "PCB Design", "Design Approved"],                   currentStep: 4 }
+  "elecric-lighter": { progress: 100, steps: ["Design", "Electronics", "3D Print", "Assembly", "Testing"],            currentStep: 4 },
+  "ttl-siren":        { progress: 100, steps: ["Idea", "Simulation", "Schematic Design", "PCB Design", "Design Approved"],                   currentStep: 4 },
+  "binary":           { progress: 99, steps: ["Idea", "Simulation", "Schematic Design", "PCB Design", "Design Approved"],                   currentStep: 3 },
+  "lamped":           { progress: 99, steps: ["Idea", "Simulation", "Schematic Design", "PCB Design", "Design Approved"],                   currentStep: 3 }
 };
 
 // Tag format: [label, category]  —  categories: lang | hw | fab | tool | domain
@@ -146,10 +153,11 @@ const PROJECT_TAGS = {
   "launch-api":      [["Raspberry Pi","hw"],        ["Python","lang"],              ["REST API","tool"],     ["Web Server","tool"]],
   "3d-rc-plane":     [["RC Electronics","hw"],      ["CAD","tool"],                 ["Light Weight 3D Printing","fab"],   ["Aerodynamics","domain"]],
   "electric-lighter":[["Basic Hardware","hw"],     ["Heating elements","hw"],      ["3D Printing","fab"]],
-  "ttl-siren":       [["TTL Logic","hw"],           ["Electronic Simulation","hw"],           ["PCB Design","tool"]]
+  "ttl-siren":       [["TTL Logic","hw"],           ["Electronic Simulation","hw"],           ["PCB Design","tool"]],
+  "binary":          [["integrated circuits","hw"],           ["Electronic Simulation","hw"],           ["PCB Design","tool"]],
+  "lamped":          [["integrated circuits","hw"],           ["Electronic Simulation","hw"],           ["PCB Design","tool"]],
 };
 
-// ============================================================
 
 // ============================================================
 // PROJECT META — domain & difficulty for filters
@@ -166,16 +174,12 @@ const PROJECT_META = {
   "spotify-display":  { domain: ["software", "hardware"],           difficulty: "beginner" },
   "cubesat":          { domain: ["aerospace", "hardware"],          difficulty: "advanced" },
   "robotic-arm":      { domain: ["hardware", "software"],           difficulty: "advanced" },
-  "launch-api":       { domain: ["software"],                       difficulty: "advanced" }
+  "launch-api":       { domain: ["software"],                       difficulty: "advanced" },
+  "binary":           { domain: ["hardware"],                       difficulty: "beginner" },
+  "lamped":           { domain: ["hardware"],                       difficulty: "beginner" },
 };
+ 
 
-// ============================================================
-
-// Rich modal content for each project
-// images: small photos shown in the modal (filenames in the site folder)
-// video:  YouTube embed URL or direct .mp4 path (null = no video)
-// github: array of { url, label }
-// hackclub: array of { url, label }
 const PROJECT_DETAILS = {
   "rc-plane": {
     title: "Remote Control Plane",
@@ -218,6 +222,21 @@ const PROJECT_DETAILS = {
     github: [{ url: "https://github.com/Gabouin/RESOLUTION-ACTIVE-COMPONENTS", label: "GitHub" }],
     hackclub: [{ url: "https://resolution.hackclub.com/app/pathway/hardware/week/2", label: "Hack Club" }]
   },
+  "binary": {
+    title: "Binary Counter",
+    description: "Simple binary counter using Integrated Circuits (ICs).",
+    images: ["binary.png"],
+    video: null,
+    github: [{ url: "https://github.com/Gabouin/BINARY-RIPPLE_RESOLUTION-IC", label: "GitHub" }],
+  },
+  "lamped": {
+    title: "Lamped",
+    description: "Custom lamp project with integrated circuits (ICs). Use the potentiometer to light up the LEDs one by one and adjusting the global brightness, creating a cool visual effect. The PCB is designed in the shape of a lamp and features a simple circuit.",
+    images: ["LAMPED BANNER.png"],
+    video: null,
+    github: [{ url: "https://github.com/Gabouin/LAMPED", label: "GitHub" }],
+  },
+
   "hackpad": {
     title: "HackPad",
     description: "Custom macropad with 6 switches, a rotary encoder (volume control), an OLED display (animations per key), and an RP2040 microcontroller. Can be used for different tasks while working. PCB designed in KiCad, enclosure designed in Fusion 360.",
