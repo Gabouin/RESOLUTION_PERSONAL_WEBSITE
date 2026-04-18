@@ -40,7 +40,7 @@ const TRANSLATIONS = {
   "proj-lamped":       { en: "Lamped - Custom Lamp Project",          fr: "Lamped - Projet de lampe personnalisée" },
   "about-title":       { en: "ABOUT ME",                              fr: "À PROPOS DE MOI" },
   "about-p1":          { en: "I'm Gabin Tavernier, a student from La Réunion passionate about aerospace, electronics, and building things that actually work.", fr: "Je suis Gabin Tavernier, un étudiant de La Réunion passionné par l'aérospatial, l'électronique et la fabrication de projets concrets." },
-  "about-p2":          { en: "I design custom PCBs with KiCad, program microcontrollers (RP2040, ESP32) in C/C++ and Python, and build everything from macropads to stratospheric balloon payloads with LoRa telemetry. I'm currently preparing for the BIA (Aeronautics Initiation Diploma) and aiming for CPGE then ISAE-SUPAERO.", fr: "Je conçois des PCBs avec KiCad, programme des microcontrôleurs (RP2040, ESP32) en C/C++ et Python, et construis tout, des macropads jusqu'aux charges utiles de ballons strat. J'ai obtenu mon BIA en 2024 et vise une CPGE puis l'ISAE-SUPAERO." },
+  "about-p2":          { en: "I design custom PCBs with KiCad, program microcontrollers (RP2040, ESP32) in C/C++ and Python, and build everything from macropads to stratospheric balloon payloads with LoRa telemetry. I got my BIA (Aeronautics Initiation Diploma) in 2024 and I'm aiming for ISAE-SUPAERO.", fr: "Je conçois des PCBs avec KiCad, programme des microcontrôleurs (RP2040, ESP32) en C/C++ et Python, et construis tout, des macropads jusqu'aux charges utiles de ballons strat. J'ai obtenu mon BIA en 2024 et vise l'ISAE-SUPAERO." },
   "about-p3":          { en: "I'm active in <a href=\"https://hackclub.com\" target=\"_blank\" rel=\"noopener\">Hack Club</a> and I've participated in programs like Blueprint, Stasis, and various YSWS grants to fund my hardware projects.", fr: "Je suis actif sur <a href=\"https://hackclub.com\" target=\"_blank\" rel=\"noopener\">Hack Club</a> et j'ai participé aux programmes Blueprint, Stasis et divers autres programmes YSWS pour financer mes projets." },
   "skills-title":      { en: "MY SKILLS",                             fr: "MES COMPÉTENCES" },
   "skill-prog":        { en: "Programming",                           fr: "Programmation" },
@@ -240,7 +240,7 @@ const PROJECT_DETAILS = {
   "hackpad": {
     title: "HackPad",
     description: "Custom macropad with 6 switches, a rotary encoder (volume control), an OLED display (animations per key), and an RP2040 microcontroller. Can be used for different tasks while working. PCB designed in KiCad, enclosure designed in Fusion 360.",
-    images: ["hackpad.png"],
+    images: ["pcb.hackpad.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/Gab-s-Hackpad", label: "GitHub" }],
     hackclub: [{ url: "https://blueprint.hackclub.com/projects/13108", label: "Hack Club" }]
@@ -342,9 +342,10 @@ function buildLinksHTML(key) {
 function buildModalImagesHTML(key) {
   const d = PROJECT_DETAILS[key];
   if (!d || !d.images || !d.images.length) return '';
+  var imgClass = key === 'hackpad' ? 'modal-thumb modal-thumb-square' : 'modal-thumb';
   return '<div class="modal-images">' +
     d.images.map(function(src) {
-      return '<img src="' + src + '" alt="" class="modal-thumb" />';
+      return '<img src="' + src + '" alt="" class="' + imgClass + '" />';
     }).join('') +
     '</div>';
 }

@@ -26,7 +26,7 @@ html {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: -1;
 }
 
 /* ── WIP Full-page Splash ── */
@@ -769,9 +769,9 @@ ul {
 /* ── Skills page ── */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 48px;
-    margin-top: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 2.5rem;
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
@@ -782,36 +782,59 @@ ul {
 }
 
 .skill-card {
-    background: #111111;
-    border: 1px solid #252525;
-    border-radius: 8px;
-    padding: 1.6rem 1.8rem;
+    --accent: #666;
+    background: #131313;
+    border: 1px solid #222;
+    border-top: 3px solid var(--accent);
+    border-radius: 12px;
+    padding: 1.8rem 2rem 1.6rem;
     text-align: left;
-    margin-bottom: 1rem;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 20px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.skill-card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    line-height: 1;
 }
 
 .skill-card-title {
     font-family: 'VT323', monospace;
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     letter-spacing: 2px;
-    color: #00ff88;
-    margin-bottom: 22px;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+
+.skill-card-subtitle {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.62rem;
+    color: #555;
+    letter-spacing: 0.06em;
+    margin-bottom: 18px;
 }
 
 .skill-section {
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    margin-top: 22px;
+    margin-top: 18px;
 }
 
 .skill-section-label {
-    font-size: 0.58rem;
+    font-size: 0.56rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #666;
-    min-width: 75px;
-    padding-top: 3px;
+    color: #555;
+    min-width: 72px;
+    padding-top: 4px;
     font-family: 'Fira Code', monospace;
     flex-shrink: 0;
 }
@@ -819,40 +842,44 @@ ul {
 .skill-card .tags-list {
     justify-content: flex-start;
     margin-top: 0;
-    gap: 6px 6px;
+    gap: 7px;
     row-gap: 8px;
 }
 
 /* Per-card accent colors */
-
-.skill-card--prog   .skill-card-title { color: #818cf8; }
-.skill-card--hw     .skill-card-title { color: #34d399; }
-.skill-card--pcb    .skill-card-title { color: #38bdf8; }
-.skill-card--soft   .skill-card-title { color: #fbbf24; }
-.skill-card--domain .skill-card-title { color: #fb923c; }
+.skill-card--prog   { --accent: #818cf8; }
+.skill-card--hw     { --accent: #34d399; }
+.skill-card--pcb    { --accent: #38bdf8; }
+.skill-card--soft   { --accent: #fbbf24; }
+.skill-card--domain { --accent: #fb923c; }
 
 /* Tags inside skill cards — colored per card */
 .skill-card .tag {
-    background: #1c1c1c;
-    border-radius: 3px;
-    font-size: 0.65rem;
-    padding: 2px 7px;
-    border: none;
-    color: #ccc;
+    background: #1a1a1a;
+    border-radius: 6px;
+    font-size: 0.68rem;
+    padding: 4px 10px;
+    border: 1px solid #2a2a2a;
+    color: #bbb;
+    transition: border-color 0.15s, color 0.15s;
 }
 
-.skill-card--prog   .tag { background: #1e1c38; color: #a5b4fc; }
-.skill-card--hw     .tag { background: #0e2820; color: #6ee7b7; }
-.skill-card--pcb    .tag { background: #0d2233; color: #7dd3fc; }
-.skill-card--soft   .tag { background: #2c2208; color: #fcd34d; }
-.skill-card--domain .tag { background: #2a1800; color: #fdba74; }
+.skill-card:hover .tag {
+    border-color: #333;
+}
+
+.skill-card--prog   .tag { background: #18173a; color: #a5b4fc; border-color: #2a2856; }
+.skill-card--hw     .tag { background: #0c2a1f; color: #6ee7b7; border-color: #1a3d2e; }
+.skill-card--pcb    .tag { background: #0c2038; color: #7dd3fc; border-color: #163050; }
+.skill-card--soft   .tag { background: #2e2308; color: #fcd34d; border-color: #3d3010; }
+.skill-card--domain .tag { background: #2c1a04; color: #fdba74; border-color: #3e260a; }
 
 /* Gray tags inherit muted accent per card */
-.skill-card--prog   .tag--gray { background: #16152a; color: #6366f1; }
-.skill-card--hw     .tag--gray { background: #0a1e17; color: #34d399; }
-.skill-card--pcb    .tag--gray { background: #091929; color: #38bdf8; }
-.skill-card--soft   .tag--gray { background: #1f1804; color: #d97706; }
-.skill-card--domain .tag--gray { background: #1f1100; color: #f97316; }
+.skill-card--prog   .tag--gray { background: #14132e; color: #6366f1; border-color: #252350; }
+.skill-card--hw     .tag--gray { background: #091e16; color: #34d399; border-color: #153528; }
+.skill-card--pcb    .tag--gray { background: #091828; color: #38bdf8; border-color: #122640; }
+.skill-card--soft   .tag--gray { background: #201904; color: #d97706; border-color: #33280a; }
+.skill-card--domain .tag--gray { background: #201200; color: #f97316; border-color: #301d06; }
 
 /* ── Tags ── */
 .tags-list {
@@ -955,12 +982,18 @@ ul {
 
 .modal-thumb {
     width: auto;
-    max-width: 480px;
+    max-width: 100%;
     max-height: 360px;
     object-fit: cover;
     border-radius: 10px;
-    border: 1px solid #2a2a2a;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    border: none;
+    box-shadow: none;
+}
+
+.modal-thumb-square {
+    width: min(82vw, 460px);
+    aspect-ratio: 1 / 1;
+    object-position: center;
 }
 
 .modal-video {
