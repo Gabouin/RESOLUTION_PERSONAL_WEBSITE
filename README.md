@@ -1,3 +1,5 @@
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+
 # My personnal website, that act as a portfolio of my projects
 
 ____
