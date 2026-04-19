@@ -184,7 +184,7 @@ const PROJECT_DETAILS = {
   "rc-plane": {
     title: "Remote Control Plane",
     description: "RC plane built with styrofoam and 3D printed parts. Uses servo motors, a brushless motor, a propeller, ESC, receiver and transmitter. I designed the structure on Canva and modelled it in Fusion 360. The plane is lightweight and flies well, with a flight time of around 5 minutes.",
-    images: ["gabin rc plane.png"],
+    images: ["images/gabin rc plane.png"],
     video: "https://www.youtube.com/embed/v7-GCenTMmM",
     github: [{ url: "https://github.com/Gabouin/Gabs-RC-plane", label: "GitHub" }],
     hackclub: [{ url: "https://blueprint.hackclub.com/projects/6271", label: "Hack Club" }]
@@ -192,7 +192,7 @@ const PROJECT_DETAILS = {
   "space-collector": {
     title: "Space Collector",
     description: "Small arcade game built in JavaScript for the Sprig console by Hack Club. Collect items in space and avoid obstacles!",
-    images: ["sprig.png"],
+    images: ["images/sprig.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/Space-collector", label: "GitHub" }],
     hackclub: [{ url: "https://sprig.hackclub.com/", label: "Hack Club" }]
@@ -200,7 +200,7 @@ const PROJECT_DETAILS = {
   "fan-reactor": {
     title: "Fan Plane Reactor",
     description: "3D printed fan that looks like a plane reactor. Powered via USB-C, with a switch and a potentiometer to regulate the motor speed. I love the look of airplane reactors and this project only requires basic electronics and 3D printed parts.",
-    images: ["fan plane reactor.png"],
+    images: ["images/fan plane reactor.png"],
     video: "https://www.youtube.com/embed/CXMXyju0Se0",
     github: [{ url: "https://github.com/Gabouin/fan-plane-reactor", label: "GitHub" }],
     hackclub: [{ url: "https://blueprint.hackclub.com/projects/11654", label: "Hack Club" }]
@@ -208,8 +208,8 @@ const PROJECT_DETAILS = {
   "electric-lighter": {
     title: "Electric Lighter",
     description: "Electric lighter built from a vape battery found on the ground, a charging module, a toaster heating element, and a 3D-printed enclosure. Will be used to start campfires or just burn things for fun!",
-    images: ["el.png"],
-    video: "el.mp4",
+    images: ["images/el.png"],
+    video: "videos/el.mp4",
     videoPortrait: true,
     github: [{ url: "https://github.com/Gabouin/Electric-lighter", label: "GitHub" }],
     hackclub: [{ url: "https://stasis.hackclub.com/dashboard/projects/cmnkcivyz015901po8n7ddugv", label: "Hack Club" }]
@@ -217,7 +217,7 @@ const PROJECT_DETAILS = {
   "ttl-siren": {
     title: "TTL Based Police Siren",
     description: "Police siren built with an astable multivibrator using BJT transistors, no microcontroller. Two transistors alternately switch on/off, making blue and red LEDs blink like a siren. PCB is shaped like a police siren in KiCad. Made for RESOLUTION Hack Club week 2.",
-    images: ["TTL.png"],
+    images: ["images/TTL.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/RESOLUTION-ACTIVE-COMPONENTS", label: "GitHub" }],
     hackclub: [{ url: "https://resolution.hackclub.com/app/pathway/hardware/week/2", label: "Hack Club" }]
@@ -225,14 +225,14 @@ const PROJECT_DETAILS = {
   "binary": {
     title: "Binary Counter",
     description: "Simple binary counter using Integrated Circuits (ICs).",
-    images: ["binary.png"],
+    images: ["images/binary.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/BINARY-RIPPLE_RESOLUTION-IC", label: "GitHub" }],
   },
   "lamped": {
     title: "Lamped",
     description: "Custom lamp project with integrated circuits (ICs). Use the potentiometer to light up the LEDs one by one and adjusting the global brightness, creating a cool visual effect. The PCB is designed in the shape of a lamp and features a simple circuit.",
-    images: ["LAMPED BANNER.png"],
+    images: ["images/LAMPED BANNER.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/LAMPED", label: "GitHub" }],
   },
@@ -240,7 +240,7 @@ const PROJECT_DETAILS = {
   "hackpad": {
     title: "HackPad",
     description: "Custom macropad with 6 switches, a rotary encoder (volume control), an OLED display (animations per key), and an RP2040 microcontroller. Can be used for different tasks while working. PCB designed in KiCad, enclosure designed in Fusion 360.",
-    images: ["pcb.hackpad.png"],
+    images: ["images/pcb.hackpad.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/Gab-s-Hackpad", label: "GitHub" }],
     hackclub: [{ url: "https://blueprint.hackclub.com/projects/13108", label: "Hack Club" }]
@@ -248,7 +248,7 @@ const PROJECT_DETAILS = {
   "3d-rc-plane": {
     title: "3D Printed RC Plane",
     description: "The second version of my RC plane but fully 3d printed with grey lightweight PLA and better aerodynamics, as it's a completly new model.",
-    images: ["3D plane.png"],
+    images: ["images/3D plane.png"],
     video: null,
     github: [],
     hackclub: []
@@ -256,7 +256,7 @@ const PROJECT_DETAILS = {
   "apx-devboard": {
     title: "APX Devboard",
     description: "APX stands for APEX, the pinnacle, absolute excellence. It's basically a custom development board designed for embedded projects and prototyping.",
-    images: ["devboard.png"],
+    images: ["images/devboard.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/APX-devboard", label: "GitHub" }],
     hackclub: [{ url: "https://stasis.hackclub.com/dashboard/projects/cmneq8qhn000401o4qvnlucgr", label: "Hack Club" }]
@@ -264,7 +264,7 @@ const PROJECT_DETAILS = {
   "spotify-display": {
     title: "Spotify Display",
     description: "ESP32-based real-time Spotify music display with SPI screen. Shows the currently playing track and enables control without touching your phone.",
-    images: ["display.png"],
+    images: ["images/display.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/APX-spotify-display", label: "GitHub" }],
     hackclub: [{ url: "https://stasis.hackclub.com/dashboard/projects/cmnhoon33003901t8pogxgjfx", label: "Hack Club" }]
@@ -272,7 +272,7 @@ const PROJECT_DETAILS = {
   "cubesat": {
     title: "CubeSat Project",
     description: "Student CubeSat packed with sensors and electronics, designed to be launched into the stratosphere with a helium balloon. Mission planning, PCB design, and full integration.",
-    images: ["cubesat.png"],
+    images: ["images/cubesat.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/Gabs-CubeSat", label: "GitHub" }],
     hackclub: [{ url: "https://stasis.hackclub.com/dashboard/projects/cmmyufcqi00i501rye3hjri9z", label: "Hack Club" }]
@@ -280,7 +280,7 @@ const PROJECT_DETAILS = {
   "robotic-arm": {
     title: "Robotic Arm",
     description: "Robotic arm built with powerful servomotors salvaged from an old humanoid robot. AI-enhanced with vision and control for automation and learning.",
-    images: ["arm.png"],
+    images: ["images/arm.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/Robotic-Arm", label: "GitHub" }],
     hackclub: [{ url: "https://stasis.hackclub.com/dashboard/projects/cmmyufcqi00i501rye3hjri9z", label: "Hack Club" }]
@@ -288,7 +288,7 @@ const PROJECT_DETAILS = {
   "launch-api": {
     title: "Rocket Launch API",
     description: "REST API hosted on a Raspberry Pi for tracking rocket launches and space events in real time. Aggregates data from multiple sources.",
-    images: ["raspapi.png"],
+    images: ["images/raspapi.png"],
     video: null,
     github: [{ url: "https://github.com/Gabouin/Launch-Watch-API", label: "GitHub" }],
     hackclub: [{ url: "https://raspapi.hackclub.com", label: "Hack Club" }]
