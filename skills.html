@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skills - GABIN TAVERNIER</title>
+    </head>
+    <body>
+
+        <div id="header">
+            <!-- Desktop nav -->
+            <span id="nav-logo">GABIN TAVERNIER</span>
+            <nav id="nav-desktop">
+                <a href="index.html" class="nav-link" data-i18n="nav-projects">Projects</a>
+                <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+                <a href="skills.html" class="nav-link active" data-i18n="nav-skills">Skills</a>
+            </nav>
+            <div id="contact-btn-wrap">
+                <a href="contact.html"><button id="contact-btn" data-i18n="nav-contact">Contact</button></a>
+                <button class="lang-btn">FR</button>
+            </div>
+            <!-- Mobile only -->
+            <button id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <h1 id="name"> <div>GABIN TAVERNIER</div> </h1>
+            <h3 id="description" data-i18n="mobile-subtitle"> Student &bull; Maker &bull; Aerospace Enthusiast </h3>
+            <nav id="nav-dropdown">
+                <a href="index.html" class="nav-link" data-i18n="nav-projects">Projects</a>
+                <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+                <a href="skills.html" class="nav-link active" data-i18n="nav-skills">Skills</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a>
+                <button class="lang-btn lang-btn-mobile">FR</button>
+            </nav>
+        </div>
+
+        <div class="page-content">
+            <h2 id="projects" data-i18n="skills-title">MY SKILLS</h2>
+
+            <div class="skills-grid">
+
+                <div class="skills-row skills-row-top">
+
+                    <!-- CARD 1 — PROGRAMMING -->
+                    <div class="skill-card skill-card--prog">
+                        <div class="skill-card-icon">&lt;/&gt;</div>
+                        <div class="skill-card-title" data-i18n="skill-prog">Programming</div>
+                        <div class="skill-card-subtitle">Languages I work with</div>
+                        <div class="skill-section">
+                            <div class="skill-section-label" data-i18n="skill-sec-langs">Languages</div>
+                            <div class="tags-list">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">C++</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 — HARDWARE & ELECTRONICS -->
+                    <div class="skill-card skill-card--hw">
+                        <div class="skill-card-icon">&#9889;</div>
+                        <div class="skill-card-title" data-i18n="skill-hw">Hardware &amp; Electronics</div>
+                        <div class="skill-card-subtitle">Boards, sensors &amp; soldering</div>
+                        <div class="skill-section">
+                            <div class="skill-section-label" data-i18n="skill-sec-mcus">MCUs</div>
+                            <div class="tags-list">
+                                <span class="tag">Arduino</span>
+                                <span class="tag">ESP32</span>
+                                <span class="tag">RP2040</span>
+                            </div>
+                        </div>
+                        <div class="skill-section">
+                            <div class="skill-section-label" data-i18n="skill-sec-tech">Techniques</div>
+                            <div class="tags-list">
+                                <span class="tag" data-i18n="tag-smd-soldering">SMD Soldering</span>
+                                <span class="tag" data-i18n="tag-pcb-assembly">PCB Assembly</span>
+                                <span class="tag" data-i18n="tag-rc-electronics">RC Electronics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 — PCB & CAD -->
+                    <div class="skill-card skill-card--pcb">
+                        <div class="skill-card-icon">&#9881;</div>
+                        <div class="skill-card-title" data-i18n="skill-pcb">PCB &amp; CAD</div>
+                        <div class="skill-card-subtitle">Design, layout &amp; fabrication</div>
+                        <div class="skill-section">
+                            <div class="skill-section-label" data-i18n="skill-sec-pcb">PCB</div>
+                            <div class="tags-list">
+                                <span class="tag" data-i18n="tag-schematic-design">Schematic Design</span>
+                                <span class="tag" data-i18n="tag-pcb-layout">PCB Layout</span>
+                            </div>
+                        </div>
+                        <div class="skill-section">
+                            <div class="skill-section-label" data-i18n="skill-sec-3d">3D / CAD</div>
+                            <div class="tags-list">
+                                <span class="tag" data-i18n="tag-3d-printing">3D Printing FDM</span>
+                                <span class="tag" data-i18n="tag-technical-cad">Technical CAD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="skills-row skills-row-bottom">
+
+                    <!-- CARD 4 — TOOLS -->
+                    <div class="skill-card skill-card--soft">
+                        <div class="skill-card-icon">&#128736;</div>
+                        <div class="skill-card-title" data-i18n="skill-tools">Tools</div>
+                        <div class="skill-card-subtitle">Software I use daily</div>
+                        <div class="skill-section">
+                            <div class="skill-section-label" data-i18n="skill-sec-vc">Software</div>
+                            <div class="tags-list">
+                                <span class="tag">Fusion 360</span>
+                                <span class="tag">GitHub</span>
+                                <span class="tag">KiCad</span>
+                                <span class="tag">Falstad</span>
+                                <span class="tag">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <script src="script.js" defer></script>
+    </body>
+</html>
