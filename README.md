@@ -6,13 +6,13 @@
 
 # Gabin Tavernier — Portfolio Website
 
-Personal portfolio website presenting all my projects in different domains. It also include contact, skills and about me pages and is in constant evolution as I make new project and add cool features to the website. It include a traduction option in French and have different themes as I never know what I prefer.
+Personal portfolio website presenting all my projects in different domains. It also include contact, skills and about me pages and is in constant evolution as I make new project and add cool features to the website. It include a traduction option in French.
 
 🌐 Live website: [gabintavernier.com](https://gabintavernier.com)
 
 ## Overview
 
-This repository contains the source code for my portfolio website, initially started during the 8-week **Resolution (Hack Club)** challenge and continuously improved since then.
+This repository contains the source code for my portfolio website.
 
 The site includes:
 - project gallery with progress/status badges
